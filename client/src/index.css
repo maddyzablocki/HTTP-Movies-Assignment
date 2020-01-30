@@ -2,18 +2,28 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
 }
 
 .movie-card {
-  background-color: #fff;
-  border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  width: 25rem;
+  height: 25rem;
   padding: 1rem;
   cursor: pointer;
   position: relative;
-  margin: 1rem auto;
+  margin: 0 auto;
+  color: black;
+  text-decoration: none;
+}
+
+.movie-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .movie-director {
@@ -21,16 +31,19 @@ body {
   font-size: 0.8rem;
 }
 
+h2 {
+  font-family: 'Poller One', cursive;
+  font-size: 32px;
+  text-decoration: none;
+}
+
 .saved-list {
-  background-color: #fff;
   border: 0;
-  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
-  width: 75%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,25 +66,76 @@ body {
   width: 75%;
   margin: 1rem auto;
 }
-.save-button {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  border: 1px solid grey;
-  padding: 5px 10px;
-  background-color: lightseagreen;
-}
+
 .save-button:hover {
-  background-color: green;
-  color: white;
+  color: black;
 }
 
 .home-button {
   padding: 5px 10px;
-  background-color: lightskyblue;
+  text-decoration: none;
 }
 
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.all-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  margin: 1rem auto;
+  color: black;
+  text-decoration: none;
+}
+
+.save-button {
+  text-align: center;
+  width: 15%;
+  margin: .5rem;
+  border-radius: 15px;
+  background-color: rgb(189, 78, 189);
+}
+
+.delete-button {
+  text-align: center;
+  width: 15%;
+  margin: .5rem;
+  border-radius: 15px;
+  background-color: rgb(189, 78, 189);
+}
+
+.update-button {
+  text-align: center;
+  width: 15%;
+  margin: .5rem;
+  border-radius: 15px;
+  background-color: rgb(189, 78, 189);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20rem;
+  width: 20rem;
+  border: 1px solid gray;
+}
+
+input {
+  width: 75%;
 }
